@@ -7,11 +7,11 @@ class EventsController < ApplicationController
 
   def new
     @user = current_user
-    if current_user.superadmin_role? || current_user.supervisor_role?
+    # if current_user.superadmin_role? || current_user.supervisor_role?
       @event = Event.new
-    else
-      redirect_to root_path
-    end
+    # else
+      # redirect_to root_path
+    # end
      # needed to instantiate the form_for
   end
 

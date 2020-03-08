@@ -36,12 +36,10 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :mail, :picture, :description, :username)
+    params.require(:user).permit(:name,:email, :picture, :description, :username)
   end
 
   def set_user
     @user = current_user
   end
-
-
 end
