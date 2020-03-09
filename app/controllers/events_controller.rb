@@ -50,7 +50,13 @@ class EventsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def add_tag
+    # set_event
+    # puts @event
+    # @tags = []
+    # # @tags << userinput
 
+  end
 
   private
 
