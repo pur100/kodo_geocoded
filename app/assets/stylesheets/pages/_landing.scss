@@ -50,7 +50,7 @@ src: url('/fonts/Basier Circle Regular') format('woff');
 }
 
 .images {
-  background-image: url("Kodo_conf.jpg");
+  background-image: url(asset_path("Kodo_conf.jpg"));
   margin: 0 auto;
   margin-top: -50px;
   background-size: contain;
