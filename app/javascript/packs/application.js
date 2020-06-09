@@ -11,7 +11,59 @@ require("channels")
 
 
 $(document).ready( function() {
-  console.log("Ready!")
+  console.log("Ready!");
+
+  $('.newsletter').click(function() {
+      $(this).toggleClass('tab-extended');
+      $(".nl_content").removeClass("no_show")
+      $(".fllw_content").addClass("no_show")
+      $(".km_content").addClass("no_show")
+      $(".wip_content").addClass("no_show")
+      $(".know_more").removeClass("tab-extended");
+      $(".follow").removeClass("tab-extended");
+      $(".wip").removeClass("tab-extended");
+      $(".woop").removeClass("no_show");
+    });
+
+  $('.know_more').click(function() {
+      $(this).toggleClass('tab-extended');
+      $(".km_content").removeClass("no_show")
+      $(".nl_content").addClass("no_show")
+      $(".fllw_content").addClass("no_show")
+      $(".wip_content").addClass("no_show")
+      $(".follow").removeClass("tab-extended");
+      $(".newsletter").removeClass("tab-extended");
+      $(".wip").removeClass("tab-extended");
+      $(".woop").removeClass("no_show");
+    });
+
+  $('.follow').click(function() {
+      $(this).toggleClass('tab-extended');
+      $(".fllw_content").removeClass("no_show")
+      $(".nl_content").addClass("no_show")
+      $(".km_content").addClass("no_show")
+      $(".wip_content").addClass("no_show")
+      $(".know_more").removeClass("tab-extended");
+      $(".newsletter").removeClass("tab-extended");
+      $(".wip").removeClass("tab-extended");
+      $(".woop").removeClass("no_show");
+    });
+
+
+  $('.wip').click(function() {
+      $(this).toggleClass('tab-extended');
+      $(".wip_content").toggleClass("no_show")
+      $(".woop").toggleClass("no_show")
+      $(".fllw_content").addClass("no_show")
+      $(".km_content").addClass("no_show")
+      $(".know_more").removeClass("tab-extended");
+      $(".follow").removeClass("tab-extended");
+      $(".newsletter").removeClass("tab-extended");
+    });
+
+  $('.mail').each(function () {
+    $(this).html($(this).html().replace(/(\@)/g, '<span style="color: #E8F009;">$1</span>'));
+});
 })
 
 // Uncomment to copy all static images under ../images to the output folder and reference
