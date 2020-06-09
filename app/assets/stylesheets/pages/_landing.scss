@@ -45,7 +45,7 @@ src: url('/fonts/Basier Circle Regular') format('woff');
   height: calc(100vh);
   width: calc(80vw);
   position: absolute;
-   background-image: url("grid.png");
+   background-image: url(asset_path("grid.png"));
    background-size:contain;
 }
 
