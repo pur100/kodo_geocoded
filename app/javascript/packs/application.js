@@ -13,6 +13,8 @@ require("channels")
 $(document).ready( function() {
   console.log("Ready!");
 
+  //desktop
+
   $('.newsletter').click(function() {
       $(this).toggleClass('tab-extended');
       $(".nl_content").removeClass("no_show")
@@ -60,6 +62,46 @@ $(document).ready( function() {
       $(".follow").removeClass("tab-extended");
       $(".newsletter").removeClass("tab-extended");
     });
+
+  // mobile
+
+  $('.newsletterm').click(function() {
+      $(".nl_contentm").removeClass("no_show")
+      $(".fllw_contentm").addClass("no_show")
+      $(".km_contentm").addClass("no_show")
+      $(".wip_content").addClass("no_show")
+      $(".woop").removeClass("no_show");
+    });
+
+  $('.know_morem').click(function() {
+      $(".km_contentm").removeClass("no_show")
+      $(".nl_contentm").addClass("no_show")
+      $(".fllw_contentm").addClass("no_show")
+      $(".wip_contentm").addClass("no_show")
+      $(".wip").removeClass("tab-extended");
+      $(".woop").removeClass("no_show");
+    });
+
+  $('.followm').click(function() {
+      $(".fllw_contentm").removeClass("no_show")
+      $(".nl_contentm").addClass("no_show")
+      $(".km_contentm").addClass("no_show")
+      $(".wip_content").addClass("no_show")
+      $(".wip").removeClass("tab-extended");
+      $(".woop").removeClass("no_show");
+    });
+
+
+  $('.wip').click(function() {
+      $(".wip_content").toggleClass("no_show")
+      $(".woop").toggleClass("no_show")
+      $(".fllw_contentm").addClass("no_show")
+      $(".km_contentm").addClass("no_show")
+      $(".know_morem").removeClass("tab-extended");
+      $(".followm").removeClass("tab-extended");
+      $(".newsletterm").removeClass("tab-extended");
+    });
+
 
   $('.mail').each(function () {
     $(this).html($(this).html().replace(/(\@)/g, '<span style="color: #E8F009;">$1</span>'));

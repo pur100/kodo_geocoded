@@ -22,6 +22,11 @@ src: url('/fonts/Basier Circle Regular') format('woff');
 .no_show {
   display: none !important;
 }
+
+.mobile {
+  display: none;
+}
+
 .container_wide {
   position: relative;
   height: 100vh;
@@ -173,7 +178,7 @@ src: url('/fonts/Basier Circle Regular') format('woff');
     margin-top: 8px;
     cursor: pointer;
   }
-  .newsletter{
+  .newsletter, .newsletterm{
     position: relative;
     width: 33.33%;
     height: 50px;
@@ -191,7 +196,7 @@ src: url('/fonts/Basier Circle Regular') format('woff');
       padding: 0px 16px;
     }
   }
-   .know_more{
+   .know_more, .know_morem{
     position: relative;
     width: 33.33%;
     height: 50px;
@@ -202,7 +207,7 @@ src: url('/fonts/Basier Circle Regular') format('woff');
       padding: 0px 16px;
       }
     }
-   .follow{
+   .follow, .followm {
     position: relative;
     width: 33.33%;
     height: 50px;
@@ -214,3 +219,91 @@ src: url('/fonts/Basier Circle Regular') format('woff');
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .container_wide {
+    width: 100vw;
+  }
+
+  .box_title {
+    flex-direction: column;
+    width: 100%;
+    p {
+      padding: 0px 4px !important;
+    }
+    .title {
+      font-size: 16px;
+      margin-top: 22px;
+      margin-bottom: 0px;
+    }
+
+    .icons > img {
+    }
+  }
+
+  .main_stuff {
+    width: 100%;
+  }
+
+  .kodo_logo {
+      height: 69px;
+      left: -87px;
+      bottom: -43px;
+  }
+
+  .img_info {
+    width: 100%;
+  }
+  .images {
+  background-image: url(asset_path("Kodo_conf.jpg"));
+  height: 375px;
+  margin-top: 50px;
+  width: 100%;
+  }
+
+  .kodo_logo {
+    left: calc(50% - 104px);
+    bottom: -23px;
+  }
+
+  .wip {
+    width: 100vw;
+    margin: 0 !important;
+  }
+
+  .low_bar {
+    width: 100vw;
+    .newsletterm, .know_morem, .followm {
+      height: 100px;
+    }
+  }
+
+  .km_contentm, .nl_contentm, .fllw_contentm {
+    position: absolute;
+    bottom: 100px;
+    height: 410px;
+    width: 100vw;
+  }
+
+  .km_contentm {
+    background-color: blue;
+  }
+
+  .nl_contentm {
+    background-color: yellow;
+  }
+
+  .fllw_contentm {
+    background-color: pink;
+  }
+}
+
+
